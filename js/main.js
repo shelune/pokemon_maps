@@ -303,10 +303,16 @@ $(document).ready(function () {
 	$('#cities circle').click(function (e) {
 		$('.info-panel').remove();
 		var region_code = $(this).attr('id');
+		var locations = "";
 		$.each(cities, function (index, value) {
 			if (value["code"] === region_code) {
+				$.each(value["important_loc"], function (index, value) {
+					locations += value["location_name"] + ", ";
+				});
+				locations = locations.substring(0, locations.length - 2);
+				$('<div class="info-panel">' + value["city_name"] + '<br/>' + 'Population: ' + value["population"] + '<br/>' + '<h3>Important Locations: ' + locations + '</h3></div>').appendTo(map);
 				console.log(region_code);
-				$('<div class="info-panel">' + value["city_name"] + '<br/>' + 'Population: ' + value["population"] + '</div>').appendTo(map);
+				console.log(locations);
 			}
 		});
 		var mouseX = e.pageX;

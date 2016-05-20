@@ -142,6 +142,10 @@ body {
     color: #000;
 }
 
+.info-panel h3 {
+    text-transform: capitalize;
+}
+
 
 
 
