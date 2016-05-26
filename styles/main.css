@@ -134,17 +134,14 @@ body {
     transform: translateX(-45%);
 }
 
-.info-panel {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 12px;
-    font-size: 10px;
-    position: absolute;
-    color: #000;
+.detail {
+	font-size: 16px;
 }
 
-.info-panel h3 {
-    text-transform: capitalize;
+.important-locations {
+	text-transform: capitalize;
 }
+
 
 
 
